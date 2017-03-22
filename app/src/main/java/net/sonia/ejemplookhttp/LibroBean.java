@@ -10,6 +10,7 @@ import java.io.Serializable;
 public class LibroBean implements Serializable{
     private String ISBN;
     private String Titulo;
+    private int nPaginas;
 
     public LibroBean() {
     }
@@ -41,5 +42,13 @@ public class LibroBean implements Serializable{
             return gson.fromJson(json, LibroBean.class);
         }
         return new LibroBean();
+    }
+
+    public int getnPaginas() {
+        return nPaginas;
+    }
+
+    public void setnPaginas(int nPaginas) {
+        this.nPaginas = nPaginas;
     }
 }
